@@ -1,0 +1,67 @@
+@import "~antd/lib/style/themes/default.less";
+
+ul.catalist {
+  margin: 5px 0;
+  padding: 0 10px;
+  list-style: none;
+  overflow: hidden;
+  li {
+    float: left;
+    width: 33%;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+    height: auto;
+    transition: all .3s;
+    position: relative;
+    margin: 3px 0;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 10px 0 0;
+
+    .cataItem {
+      font-size: 24px;
+      margin: 10px 0 10px;
+      color: inherit;
+    }
+
+    .cataClass {
+      display: block;
+      text-align: center;
+      font-family: Lato, @font-family;
+      font-size: 15px;
+      color: #8590a6;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      .cataClass {
+        color: inherit;
+      }
+    }
+
+    &.copied:hover {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: "Copied!";
+      text-align: center;
+      line-height: 110px;
+      color: #fff;
+      transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      opacity: 0;
+    }
+
+    &.copied:after {
+      opacity: 1;
+      top: -10px;
+    }
+  }
+}

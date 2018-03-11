@@ -1,0 +1,96 @@
+@import "~antd/lib/style/themes/default.less";
+@header-height: 52px;
+@menu-item-border: 2px;
+
+.header {
+  position: relative;
+  min-width: 1032px;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
+  background-clip: content-box;
+  z-index: 100;
+  &.fixed {
+    z-index: 100;
+  }
+  .logo {
+    a {
+      color: inherit;
+      font-size: 24px;
+      text-decoration: none;
+    }
+  }
+  .nav {
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: @header-height;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-right: 18px;
+    margin-left: 27px;
+    color: #999;
+    font-family: Lato, @font-family;
+    :global {
+      .ant-menu-horizontal {
+        border: 0;
+        border-bottom: none;
+        height: @header-height;
+        .ant-menu-item {
+          height: @header-height;
+          line-height: @header-height;
+          min-width: 72px;
+          text-align: center;
+          :hover {
+            border-bottom: none;
+          }
+        }
+        .ant-menu-item-selected {
+          border-bottom: @menu-item-border solid @primary-color;
+          a {
+            color: @primary-color;
+          }
+        }
+      }
+    }
+  }
+  .userInfo {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+  height: @header-height;
+  padding: 0 16px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box; /* Firefox */
+  -webkit-box-sizing: content-box; /* Safari */
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
