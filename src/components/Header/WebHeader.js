@@ -19,12 +19,15 @@ export default class WebHeader extends PureComponent {
     return (
       <header
         id="web-header"
-        className={classNames(styles.header, comStyles.fixed)}
+        className={classNames(styles.header, comStyles.IsFixed)}
         style={{ width: '100%' }}
       >
         <div className={styles.inner} >
           <nav className={styles.logo}>
-            <a href="/">侠客百晓生</a>
+            <a href="/">
+              <img src="/favicon.ico" />
+              <span>侠客网</span>
+            </a>
           </nav>
           <nav className={styles.nav}>
             <Menu

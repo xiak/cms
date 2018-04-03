@@ -31,7 +31,7 @@ export default class ArticleCard extends PureComponent {
       contentStyles = classNames(styles.ArticleContent, styles.isCollapsed);
     }
     return (
-      <div className={classNames(styles.ArticleCard, styles.Article)}>
+      <div className={classNames(comStyles.Card, styles.Article)}>
         <div>
           <div className={styles.FirstLine}>
             <span className={styles.ComeFrom}>来自:</span>

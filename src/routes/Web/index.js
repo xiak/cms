@@ -1,8 +1,6 @@
 import React, { PureComponent } from 'react';
-import { Layout } from 'antd';
 import WebHeader from '../../components/Header/WebHeader';
 import WebContent from '../../components/Content/WebContent';
-
 
 export default class App extends PureComponent {
   render() {
@@ -11,7 +9,7 @@ export default class App extends PureComponent {
         id: '10086',
         author: {
           name: 'test',
-          avatar: 'https://pic1.zhimg.com/50/v2-c39c79fa9453ee258220d5ca01e9a3b0_s.jpg',
+          avatar: '/avatar.png',
           details: 'ondsfinsdofidsnfoids',
         },
         article: {
@@ -41,7 +39,7 @@ export default class App extends PureComponent {
         id: '10090',
         author: {
           name: 'test2',
-          avatar: 'https://pic1.zhimg.com/50/v2-c39c79fa9453ee258220d5ca01e9a3b0_s.jpg',
+          avatar: '/avatar.png',
           details: 'ondsfinsdofidsnfoids',
         },
         article: {
@@ -85,5 +83,11 @@ export default class App extends PureComponent {
         />
       </div>
     );
+    // return (
+    //   <div>
+    //     <WebHeader />
+    //     <PostEidtor />
+    //   </div>
+    // );
   }
 }

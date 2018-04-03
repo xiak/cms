@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Card, Icon } from 'antd';
+import { Icon } from 'antd';
 import classNames from 'classnames';
 import styles from './CatagoryCard.less';
 import comStyles from '../Common/mixins.less';
@@ -7,36 +7,42 @@ import comStyles from '../Common/mixins.less';
 export default class CatagoryCard extends PureComponent {
   render() {
     return (
-      <Card
-        className={classNames(comStyles.small, comStyles.card)}
+      <div
+        className={classNames(comStyles.small, comStyles.Card)}
       >
-        <ul className={styles.catalist}>
-          <li className={comStyles.yellow}>
-            <Icon type="pay-circle" className={styles.cataItem} />
+        <ul className={styles.Catalist}>
+          <li className={classNames(comStyles.yellow)}>
+            <Icon type="desktop" className={styles.cataItem} />
             <span className={styles.cataClass}>
-              <span>财富</span>
+              <span>直播</span>
             </span>
           </li>
           <li className={comStyles.green}>
-            <Icon type="like" className={styles.cataItem} />
+            <Icon type="book" className={styles.cataItem} />
             <span className={styles.cataClass}>
-              <span>关注</span>
+              <span>书店</span>
             </span>
           </li>
           <li className={comStyles.blue}>
-            <Icon type="clock-circle" className={styles.cataItem} />
+            <Icon type="notification" className={styles.cataItem} />
             <span className={styles.cataClass}>
-              <span>浏览</span>
+              <span>话题</span>
             </span>
           </li>
           <li className={comStyles.blue}>
-            <Icon type="shopping-cart" className={styles.cataItem} />
+            <Icon type="edit" className={styles.cataItem} />
             <span className={styles.cataClass}>
-              <span>购物</span>
+              <span>专栏</span>
+            </span>
+          </li>
+          <li className={comStyles.blue}>
+            <Icon type="red-envelope" className={styles.cataItem} />
+            <span className={styles.cataClass}>
+              <span>付费咨询</span>
             </span>
           </li>
         </ul>
-      </Card>
+      </div>
     );
   }
 }
