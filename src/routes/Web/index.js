@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
-import WebHeader from '../../components/Header/WebHeader';
-import WebContent from '../../components/Content/WebContent';
+import MainPage from '../../layout/MainPage';
 
-export default class App extends PureComponent {
+export default class Index extends PureComponent {
   render() {
     const contents = [
       {
@@ -76,18 +75,7 @@ export default class App extends PureComponent {
       },
     ];
     return (
-      <div>
-        <WebHeader />
-        <WebContent
-          contents={contents}
-        />
-      </div>
+      <MainPage contents={contents} />
     );
-    // return (
-    //   <div>
-    //     <WebHeader />
-    //     <PostEidtor />
-    //   </div>
-    // );
   }
 }

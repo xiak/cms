@@ -14,7 +14,7 @@ function RouterConfig({ history, app }) {
   const routerData = getRouterData(app);
   console.info('->');
   const Index = routerData['/'].component;
-  const Write = routerData['/creater'].component;
+  const Write = routerData['/creator'].component;
   return (
     <LocaleProvider locale={zhCN}>
       <Router history={history}>
@@ -25,7 +25,11 @@ function RouterConfig({ history, app }) {
             render={props => <Index {...props} />}
           />
           <Route
-            path="/creater"
+            path="/creator"
+            render={props => <Write {...props} />}
+          />
+          <Route
+            path="/article/:id"
             render={props => <Write {...props} />}
           />
         </Switch>

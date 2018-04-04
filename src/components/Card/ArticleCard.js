@@ -21,7 +21,7 @@ export default class ArticleCard extends PureComponent {
     });
   }
   render() {
-    const { catagory, author, article } = this.props;
+    const { route, catagory, author, article } = this.props;
     let voteStyles = classNames(comStyles.Button, styles.ArticleVoteButton);
     let contentStyles = classNames(styles.ArticleContent);
     if (this.state.like) {
@@ -65,7 +65,7 @@ export default class ArticleCard extends PureComponent {
             </div>
           </div>
           <div className={styles.ArticleTitle}>
-            {article.title}
+            <a target="_blank" href={route} >{article.title}</a>
           </div>
           <div
             className={contentStyles}

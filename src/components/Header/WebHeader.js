@@ -24,10 +24,10 @@ export default class WebHeader extends PureComponent {
       >
         <div className={styles.inner} >
           <nav className={styles.logo}>
-            <a href="/">
-              <img src="/favicon.ico" />
+            <Link to="/">
+              <img src="/favicon.ico" alt="" />
               <span>侠客网</span>
-            </a>
+            </Link>
           </nav>
           <nav className={styles.nav}>
             <Menu
@@ -38,19 +38,19 @@ export default class WebHeader extends PureComponent {
               mode="horizontal"
             >
               <Menu.Item key="home">
-                <a to="/">
+                <Link to="/">
                   首页
-                </a>
+                </Link>
               </Menu.Item>
               <Menu.Item key="discovery">
-                <a to="/discovery">
+                <Link to="/discovery">
                   发现
-                </a>
+                </Link>
               </Menu.Item>
               <Menu.Item key="topic">
-                <a to="/topic">
+                <Link to="/topic">
                   话题
-                </a>
+                </Link>
               </Menu.Item>
             </Menu>
           </nav>
