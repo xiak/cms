@@ -1,8 +1,12 @@
 import React, { PureComponent } from 'react';
-import MainPage from '../../layout/MainPage';
+import Header from '../../components/Header/WebHeader';
+import Content from '../../components/Content/MainContent';
 
 export default class Index extends PureComponent {
   render() {
+    const { match } = this.props;
+    const key = match.path;
+    console.info(match, key);
     const contents = [
       {
         id: '10086',
@@ -75,7 +79,10 @@ export default class Index extends PureComponent {
       },
     ];
     return (
-      <MainPage contents={contents} />
+      <div>
+        <Header selectedKey={key} />
+        <Content contents={contents} />
+      </div>
     );
   }
 }

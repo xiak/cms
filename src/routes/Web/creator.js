@@ -1,10 +1,16 @@
 import React, { PureComponent } from 'react';
-import EditorPage from '../../layout/EditorPage';
+import Header from '../../components/Header/WebHeader';
+import Content from '../../components/Content/EditorContent';
 
 export default class Creator extends PureComponent {
   render() {
+    const { match } = this.props;
+    const key = match.path;
     return (
-      <EditorPage />
+      <div>
+        <Header selectedKey={key} />
+        <Content />
+      </div>
     );
   }
 }

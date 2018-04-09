@@ -4,9 +4,10 @@ import Content from '../components/Content/EditorContent';
 
 export default class EditorPage extends PureComponent {
   render() {
+    const { headerKey } = this.props;
     return (
       <div>
-        <Header />
+        <Header selectedKey={headerKey} />
         <Content />
       </div>
     );

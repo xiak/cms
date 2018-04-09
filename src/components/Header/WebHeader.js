@@ -5,17 +5,10 @@ import classNames from 'classnames';
 import styles from './WebHeader.less';
 import comStyles from '../Common/mixins.less';
 
+
 export default class WebHeader extends PureComponent {
-  state = {
-    current: 'home',
-  }
-  handleClick = (e) => {
-    console.log('click ', e);
-    this.setState({
-      current: e.key,
-    });
-  }
   render() {
+    const { selectedKey } = this.props;
     return (
       <header
         id="web-header"
@@ -33,23 +26,17 @@ export default class WebHeader extends PureComponent {
             <Menu
               id="nav"
               key="nav"
-              onClick={this.handleClick}
-              selectedKeys={[this.state.current]}
+              selectedKeys={[selectedKey || 'home']}
               mode="horizontal"
             >
-              <Menu.Item key="home">
-                <Link to="/">
+              <Menu.Item key="/">
+                <Link to="/" >
                   首页
                 </Link>
               </Menu.Item>
-              <Menu.Item key="discovery">
-                <Link to="/discovery">
-                  发现
-                </Link>
-              </Menu.Item>
-              <Menu.Item key="topic">
-                <Link to="/topic">
-                  话题
+              <Menu.Item key="/creator">
+                <Link to="/creator" >
+                  写文章
                 </Link>
               </Menu.Item>
             </Menu>

@@ -4,10 +4,10 @@ import Content from '../components/Content/MainContent';
 
 export default class MainPage extends PureComponent {
   render() {
-    const { contents } = this.props;
+    const { headerKey, contents } = this.props;
     return (
       <div>
-        <Header />
+        <Header selectedKey={headerKey} />
         <Content contents={contents} />
       </div>
     );

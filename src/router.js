@@ -12,7 +12,6 @@ dynamic.setDefaultLoadingComponent(() => {
 
 function RouterConfig({ history, app }) {
   const routerData = getRouterData(app);
-  console.info('->');
   const Index = routerData['/'].component;
   const Write = routerData['/creator'].component;
   return (
